@@ -1,0 +1,38 @@
+.wrapper() {
+  .clear-after();
+  .clear-before();
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.absoluteFullsize() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.full-block() {
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+.full-float() {
+  float: left;
+  width: 100%;
+}
+
+.full-block-float() {
+  .full-block();
+  .full-float();
+}
+
+.full-img() {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

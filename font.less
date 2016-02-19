@@ -1,0 +1,9 @@
+.font-size(@font-size, @line-height) {
+  font-size: @font-size;
+  line-height: @line-height;
+}
+
+.font-with-padding(@font-size, @line-height, @height) {
+  .font-size(@font-size, @line-height);
+  padding: ((@height - @line-height) / 2);
+}

@@ -1,0 +1,22 @@
+.vertical-margin(@margin) {
+  margin-left: @margin;
+  margin-right: @margin;
+}
+
+.vertical-padding(@margin) {
+  padding-left: @margin;
+  padding-right: @margin;
+}
+
+.horizontal-margin(@margin) {
+  margin-top: @margin;
+  margin-bottom: @margin;
+}
+
+.no-vertical-margin() {
+  .vertical-margin(0);
+}
+
+.no-horizontal-margin() {
+  .horizontal-margin(0);
+}

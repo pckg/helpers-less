@@ -1,0 +1,17 @@
+.vertical-padding(@padding) {
+  padding-left: @padding;
+  padding-right: @padding;
+}
+
+.horizontal-padding(@padding) {
+  padding-top: @padding;
+  padding-bottom: @padding;
+}
+
+.no-vertical-padding() {
+  .vertical-padding(0);
+}
+
+.no-horizontal-padding() {
+  .horizontal-padding(0);
+}

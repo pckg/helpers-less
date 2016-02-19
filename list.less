@@ -1,0 +1,9 @@
+.listContainer(@n, @margin, @bottom-padding, @item) {
+  .vertical-margin(-@margin);
+  .clear-after();
+  @{item} {
+    .vertical-padding(@margin);
+    .clearAndWidth(@n);
+    padding-bottom: @bottom-padding;
+  }
+}

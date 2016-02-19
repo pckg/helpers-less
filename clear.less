@@ -1,0 +1,34 @@
+.clear-after() {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clear-before() {
+  &:before {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+.clear(@n) {
+  &:nth-child(@{n}n) {
+    clear: right;
+  }
+  &:nth-child(@{n}n + 1) {
+    clear: left;
+  }
+}
+
+.clearAndWidth(@n) when (@n > 1) {
+  width: 100% / @n;
+  .clear(@n);
+}
+
+.clearAndWidth(@n) when (@n = 1) {
+  width: 100%;
+  clear: both;
+}
