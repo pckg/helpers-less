@@ -12,6 +12,28 @@
   }
 }
 
+.style-with-hover(@primary, @secondary) {
+  .transition();
+  color: @primary;
+  border: 1px solid @secondary;
+  background-color: @secondary;
+  &:hover {
+    color: @secondary;
+    background-color: @primary;
+  }
+}
+
+.style-with-hover-inverted(@primary, @secondary) {
+  .transition();
+  color: @primary;
+  border: 1px solid @primary;
+  background-color: @secondary;
+  &:hover {
+    color: @secondary;
+    background-color: @primary;
+  }
+}
+
 .transition() {
   transition: all 500ms ease-in-out;
 }
