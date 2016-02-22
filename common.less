@@ -1,9 +1,17 @@
-.wrapper() {
+.wrapper(@width: @wrapperWidth) {
   .clear-after();
   .clear-before();
   width: 100%;
-  max-width: 1170px;
+  max-width: @width;
   margin: 0 auto;
+}
+
+.wrapper-responsive(@padding: @wrapperPadding) {
+  .wrapper();
+  @media (max-width: (@wrapperWidth + 3 * @padding)) {
+    .vertical-padding(@padding);
+    max-width: none;
+  }
 }
 
 .absoluteFullsize() {
