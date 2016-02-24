@@ -14,6 +14,11 @@
   }
 }
 
+.clear-both() {
+  .clear-before();
+  .clear-after();
+}
+
 .clear(@n) {
   &:nth-child(@{n}n) {
     clear: right;
