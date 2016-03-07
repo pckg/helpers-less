@@ -1,0 +1,13 @@
+{
+  "name": "pckg/helpers-less",
+  "description": "Basic LESS helpers",
+  "homepage": "https://github.com/pckg/helpers-less",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bojan Rajh",
+      "email": "schtr4jh@schtr4jh.net"
+    }
+  ],
+  "minimum-stability": "dev"
+}
