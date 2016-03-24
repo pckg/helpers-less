@@ -1,4 +1,5 @@
-.listContainer(@n, @margin, @bottom-padding, @item) {
+.list-container(@n, @margin, @bottom-padding, @item) {
+  list-style-type: none;
   .vertical-margin(-@margin);
   .clear-after();
   @{item} {
@@ -6,5 +7,17 @@
     .clear-and-width(@n);
     float: left;
     padding-bottom: @bottom-padding;
+  }
+}
+
+.list-container-responsive(@n, @margin, @bottom-padding, @item, @base) {
+  list-style-type: none;
+  .vertical-margin(-@margin);
+  .clear-after();
+  @{item} {
+    .vertical-padding(@margin);
+    float: left;
+    padding-bottom: @bottom-padding;
+    .clear-and-width-responsive(@n, @base, true);
   }
 }
