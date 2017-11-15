@@ -26,6 +26,9 @@
   &:nth-child(@{n}n + 1) {
     clear: left;
   }
+  &:not(:nth-child(@{n}n + 1)):not(@{n}n) {
+    clear: none;
+  }
 }
 
 .clear-and-width(@n) when (@n > 1) {
