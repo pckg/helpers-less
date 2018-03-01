@@ -26,7 +26,7 @@
   &:nth-child(@{n}n + 1) {
     clear: left;
   }
-  &:not(:nth-child(@{n}n + 1)):not(@{n}n) {
+  &:not(:nth-child(@{n}n + 1)):not(:nth-child(@{n}n)) {
     clear: none;
   }
 }
