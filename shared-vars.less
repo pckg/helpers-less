@@ -1,0 +1,81 @@
+/* start shared-vars.less */
+
+/**
+  * Vars that are standardized over themes.
+ */
+@font-family-p-first: 'Open Sans';
+@font-family-s-first: 'Source Sans Pro';
+
+/* ----- MEDIA BREAKPOINTS ----- */
+@xxs-min: 384px; // large mobile
+@xxs-max: 479px; // large mobile
+@xs-min: 480px; // small tablet
+@xs-max: 767px; // small tablet
+@sm-min: 768px; // large tablet
+@sm-max: 991px; // large tablet
+@md-min: 992px; // laptop
+@md-max: 1199px; // laptop
+@lg-min: 1200px; // desktop
+
+@font-family-p: ~"Open Sans, Arial, sans-serif"; // defined in design.vars config
+@font-family-s: ~"Source Sans Pro, Arial, sans-serif"; // defined in design.vars config
+@font-family-primary-system: "Helvetica Neue";
+@font-family-secondary-system: "Helvetica Neue";
+
+//COLORS - OLD @deprecated
+@color-almost-light: #eee;
+@color-light: #FFF;
+@color-gray: #8f8f8f;
+@color-gray-light: #c7c7c7;
+@color-gray-lighter: #ccc;
+
+//BORDER
+@border-radius-b: 0px;
+
+// default fonts vars
+@font-size-b: 1.6rem;
+@line-height-b: 1.5;
+@h-line-height-b: 1.3;
+@h-font-weight: bold;
+
+// font sizes standardized
+@font-size-xxs: @font-size-b * 0.6; //xsmall
+@font-size-xs: @font-size-b * 0.75; //small
+@font-size-s: @font-size-b * 1; //text
+@font-size-m: @font-size-b * 1.25; //h5
+@font-size-l: @font-size-b * 1.5; //h4
+@font-size-xl: @font-size-b * 2; //h3
+@font-size-xxl: @font-size-b * 2.75; //h2
+@font-size-xxxl: @font-size-b * 3.6; //h1
+
+// ----- COMPONENTS -----
+//paddings and margins
+@spacing-xxs: .5rem;
+@spacing-xs: 1rem;
+@spacing-s: 2rem;
+@spacing-m: 4rem;
+@spacing-l: 8rem;
+@spacing-xl: 12rem;
+@spacing-xxl: 16rem;
+@spacing-xxxl: 20rem; // ?
+
+@spacing-scale-mobile: 0.84;
+
+@radius-xxs: @spacing-xxs / 2;
+@radius-xs: @spacing-xs / 2;
+@radius-sm: @spacing-s / 2;
+@radius-md: @spacing-m / 2;
+@radius-lg: @spacing-l / 2;
+@radius-xl: @spacing-xl / 2;
+@radius-xxl: @spacing-xxl / 2;
+@radius-xxxl: @spacing-xxxl / 2;
+
+// ----- LINKS -----
+@link-weight: bold;
+
+// ----- TRANSITIONS DEFAULT SETTINGS -----
+@transition-style-default: ease-in-out;
+@transition-duration-normal: 0.1s;
+@transition-d: all @transition-style-default @transition-duration-normal;
+
+/* end shared-vars.less */
