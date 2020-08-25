@@ -5,12 +5,18 @@
   .@{attr}-@{size}@{medium} {
       @{attr}: ~ "var(--spacing-@{size})";
   }
+  .@{attr}-@{size}-g@{medium} {
+      @{attr}: ~ "calc(var(--spacing-@{size}) * var(--golden))";
+  }
   each(@directions, {
     .no-@{attr}-@{value}@{medium} {
         @{attr}-@{value}: 0;
     }
     .@{attr}-@{value}-@{size}@{medium} {
         @{attr}-@{value}: ~ "var(--spacing-@{size})";
+    }
+    .@{attr}-@{value}-@{size}-g@{medium} {
+        @{attr}-@{value}: ~ "calc(var(--spacing-@{size}) * var(--golden))";
     }
   });
 }

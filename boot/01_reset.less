@@ -221,6 +221,14 @@ input[type=button] {
   -ms-interpolation-mode: bicubic;
 }
 
+p {
+  line-height: 161.803398875%;
+}
+
+p + p {
+  margin-top: .666em;
+}
+
 /* prevent BG image flicker upon hover
    (commented out as usage is rare, and the filter syntax messes with some pre-processors)
 .ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
