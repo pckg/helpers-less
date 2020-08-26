@@ -62,6 +62,11 @@
 .mediaCss(display-flex, display, flex);
 .mediaCss(hidden, display, none);
 
+.flex-tower {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flex-row {
   display: flex;
   justify-content: space-between;
@@ -92,6 +97,23 @@
   }
 }
 
+@media (min-width: @sm-min) {
+  .flex-row\@sm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: @xs-min) {
+  .flex-row\@xs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
 .--gap-basis {
   grid-gap: 1.6rem;
 }
@@ -113,6 +135,10 @@
 .flex-item {
   flex-grow: 1;
   flex-basis: 0;
+}
+.flex-100 {
+  display: flex;
+  flex-basis: 100%;
 }
 
 .--grid-num {
