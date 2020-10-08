@@ -14,10 +14,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
+  //font-size: 100%;
   font-weight: normal;
   vertical-align: baseline;
   background: transparent;
+  line-height: 100%;
 }
 
 main, article, aside, figure, footer, header, nav, section, details, summary {
@@ -29,6 +30,10 @@ main, article, aside, figure, footer, header, nav, section, details, summary {
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
 }
 
 *,
@@ -90,6 +95,10 @@ a {
   vertical-align: baseline;
   background: transparent;
   // color: inherit;
+}
+
+b {
+  font-weight: bold;
 }
 
 del {
