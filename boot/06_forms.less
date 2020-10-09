@@ -21,9 +21,38 @@ select.form-control {
   margin-bottom: 2rem;
 }
 
+.btn {
+  border: none;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  font-weight: bold;
+  transition: all 333ms ease-in-out;
+
+  &.--primary {
+    background-color: var(--color-primary);
+  }
+
+  &.--secondary {
+    background-color: var(--color-secondary);
+  }
+
+  &.--error {
+    background-color: var(--color-error);
+  }
+
+  &.--success {
+    background-color: var(--color-success);
+  }
+
+  &.--rounded {
+    border-radius: 5rem;
+  }
+}
+
 .btn-block {
   display: block;
   width: 100%;
+  text-align: center;
 }
 
 .htmlbuilder-validator-error {

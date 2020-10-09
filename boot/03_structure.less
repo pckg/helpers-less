@@ -181,6 +181,11 @@ each(@numbers, {
   .mediaCss(~"--x@{value}", --column-count, @value);
 });
 
+/**
+Justify - position left-right
+Align - position top-bottom
+ */
+
 @align-items: center, start, end, flex-end;
 each(@align-items, {
   .mediaCss(~"--@{value}", align-items, @value);
@@ -191,9 +196,33 @@ each(@align-selfs, {
   .mediaCss(~"--@{value}", align-self, @value);
 });
 
+@align-contents: start, center, space-between, space-around, flex-end;
+each(@align-contents, {
+  .mediaCss(~"--@{value}", align-content, @value);
+});
+
 @justify-contents: start, center, space-between, space-around, flex-end;
 each(@justify-contents, {
   .mediaCss(~"--@{value}", justify-content, @value);
+});
+
+/**
+This is made with higher priority.
+ */
+each(@align-items, {
+  .mediaCss(~"--ai-@{value}", align-items, @value);
+});
+
+each(@align-selfs, {
+  .mediaCss(~"--as-@{value}", align-self, @value);
+});
+
+each(@align-contents, {
+  .mediaCss(~"--ac-@{value}", align-content, @value);
+});
+
+each(@justify-contents, {
+  .mediaCss(~"--jc-@{value}", justify-content, @value);
 });
 
 .mediaCss(--columns, flex-direction, row);
@@ -237,4 +266,11 @@ each(@positions, {
 }
 .pull-none {
   float: none;
+}
+
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
 }
