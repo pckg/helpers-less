@@ -27,25 +27,37 @@ select.form-control {
   padding: 1rem 2rem;
   font-weight: bold;
   transition: all 333ms ease-in-out;
+  text-decoration: none;
+  display: inline-block;
 
   &.--primary {
+    --btn-bg-color: var(--color-primary);
     background-color: var(--color-primary);
   }
 
   &.--secondary {
+    --btn-bg-color: var(--color-secondary);
     background-color: var(--color-secondary);
   }
 
   &.--error {
+    --btn-bg-color: var(--color-error);
     background-color: var(--color-error);
   }
 
   &.--success {
+    --btn-bg-color: var(--color-success);
     background-color: var(--color-success);
   }
 
   &.--rounded {
     border-radius: 5rem;
+  }
+
+  &.--bordered {
+    border: 2px solid var(--btn-bg-color);
+    color: var(--btn-bg-color);
+    background: transparent;
   }
 }
 

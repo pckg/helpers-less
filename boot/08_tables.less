@@ -1,0 +1,20 @@
+.table {
+  width: 100%;
+  &.--fixed {
+    table-layout: fixed;
+  }
+  &.--bordered {
+
+  }
+  &.--hover {
+    tr:hover {
+      td {
+        background-color: #f7f7f7;
+      }
+    }
+  }
+  > thead > tr > th,
+  > tbody > tr > td {
+    padding: .5rem;
+  }
+}
