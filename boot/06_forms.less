@@ -27,11 +27,16 @@ select.form-control {
   transition: all 333ms ease-in-out;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
   padding: 1rem 2rem;
   border-radius: .5rem;
   --btn-fs: ~"calc((var(--font-size-sm) + var(--font-size-md)) / 2)";
   font-size: var(--btn-fs, 1.6rem);
   padding: ~"calc(var(--btn-fs) / var(--golden)) calc(var(--btn-fs) / var(--golden))";
+
+  &.--disabled {
+    cursor: not-allowed;
+  }
 
   &.--xxs {
     --btn-fs: var(--font-size-xxs);

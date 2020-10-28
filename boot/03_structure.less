@@ -142,35 +142,66 @@
   box-sizing: border-box;
 }
 
-.--grid-sm {
-  grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr));
+/**
+1170
+/ 10 = 11.7
+/ 9 = 13
+/ 8 = 14.625
+16.7142857143
+19.5
+23.4
+29.25
+39
+58.5
+ */
+
+.--grid-xxs { /*8*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 8) - (var(--grid-column-gap) * 7 / 8)), 1fr))";
 }
 
-.--grid-md {
-  grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr));
+.--grid-xs { /*7*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 7) - (var(--grid-column-gap) * 6 / 7)), 1fr))";
 }
 
-.--grid-lg {
-  grid-template-columns: repeat( auto-fit, minmax(24rem, 1fr));
+.--grid-sm { /*6*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 6) - (var(--grid-column-gap) * 5 / 6)), 1fr))";
 }
 
-.--grid-xl {
-  grid-template-columns: repeat( auto-fit, minmax(32rem, 1fr));
+.--grid-md { /*5*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 5) - (var(--grid-column-gap) * 4 / 5)), 1fr))";
 }
+
+.--grid-lg { /*4*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 4) - (var(--grid-column-gap) * 3 / 4)), 1fr))";
+}
+
+.--grid-xl { /*3*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 3) - (var(--grid-column-gap) * 2 / 3)), 1fr))";
+}
+
+.--grid-xxl { /*2*/
+  grid-template-columns: ~"repeat(auto-fill, minmax(calc((117rem / 2) - (var(--grid-column-gap) * 1 / 2)), 1fr))";
+}
+
+// 1170
 
 .--gap-xs {
+  --grid-column-gap: var(--spacing-xs);
   grid-column-gap: var(--spacing-xs);
   grid-row-gap: var(--spacing-xs);
 }
 .--gap-sm {
+  --grid-column-gap: var(--spacing-sm);
   grid-column-gap: var(--spacing-sm);
   grid-row-gap: var(--spacing-sm);
 }
 .--gap-md {
+  --grid-column-gap: var(--spacing-md);
   grid-column-gap: var(--spacing-md);
   grid-row-gap: var(--spacing-md);
 }
 .--gap-lg {
+  --grid-column-gap: var(--spacing-lg);
   grid-column-gap: var(--spacing-lg);
   grid-row-gap: var(--spacing-lg);
 }
@@ -305,4 +336,16 @@ each(@positions, {
 }
 .static {
   position: static;
+}
+
+.section-4-hover {
+  position: relative;
+  z-index: 0;
+  .visible\@section-hover {
+    opacity: 0;
+    transition: all 333ms ease-in-out;
+  }
+  &:hover .visible\@section-hover {
+    opacity: 1;
+  }
 }
