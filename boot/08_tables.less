@@ -1,10 +1,21 @@
 .table {
   width: 100%;
+  border-collapse: collapse;
   &.--fixed {
     table-layout: fixed;
   }
   &.--bordered {
-
+    > thead > tr > th {
+      border-bottom: 2px solid var(--color-grayish);
+    }
+    > tbody > tr {
+      &:not(:last-child) > td {
+        border-bottom: 1px solid var(--color-grayish);
+      }
+      > td:not(:last-child) {
+        border-right: 1px solid var(--color-grayish);
+      }
+    }
   }
   &.--hover {
     tr:hover {
