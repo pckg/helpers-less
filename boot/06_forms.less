@@ -29,6 +29,11 @@ select.form-control {
   transition: all 333ms ease-in-out;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
+
+  &.--disabled {
+    cursor: not-allowed;
+  }
 
   &.--primary {
     --btn-bg-color: var(--color-primary);
