@@ -1,4 +1,8 @@
-  .container-fluid,
+.width-100 {
+  width: 100%;
+}
+
+.container-fluid,
 .container {
   margin: 0 auto;
   width: 100%;
@@ -142,6 +146,22 @@
   grid-template-columns: repeat( auto-fit, minmax(8rem, 1fr));
 }
 
+.--grid-md {
+  grid-template-columns: repeat( auto-fit, minmax(16rem, 1fr));
+}
+
+.--grid-lg {
+  grid-template-columns: repeat( auto-fit, minmax(24rem, 1fr));
+}
+
+.--grid-xl {
+  grid-template-columns: repeat( auto-fit, minmax(32rem, 1fr));
+}
+
+.--gap-xs {
+  grid-column-gap: var(--spacing-xs);
+  grid-row-gap: var(--spacing-xs);
+}
 .--gap-sm {
   grid-column-gap: var(--spacing-sm);
   grid-row-gap: var(--spacing-sm);
