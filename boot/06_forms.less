@@ -23,12 +23,46 @@ select.form-control {
 
 .btn {
   border: none;
-  border-radius: .5rem;
-  padding: 1rem 2rem;
   font-weight: bold;
   transition: all 333ms ease-in-out;
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  --btn-fs: ~"calc((var(--font-size-sm) + var(--font-size-md)) / 2)";
+  font-size: var(--btn-fs, 1.6rem);
+  padding: ~"calc(var(--btn-fs) / var(--golden)) calc(var(--btn-fs) / var(--golden))";
+
+  &.--disabled {
+    cursor: not-allowed;
+  }
+
+  &.--xxs {
+    --btn-fs: var(--font-size-xxs);
+  }
+
+  &.--xs {
+    --btn-fs: var(--font-size-xs);
+  }
+
+  &.--sm {
+    --btn-fs: var(--font-size-sm);
+  }
+
+  // normal
+
+  &.--md {
+    --btn-fs: var(--font-size-md);
+  }
+
+  &.--lg {
+    --btn-fs: var(--font-size-lg);
+  }
+
+  &.--xl {
+    --btn-fs: var(--font-size-xl);
+  }
 
   &.--primary {
     --btn-bg-color: var(--color-primary);
@@ -69,6 +103,6 @@ select.form-control {
 
 .htmlbuilder-validator-error {
   color: var(--color-error, red);
-  margin-top: .333em;
-  font-size: var(--font-size-xs);
+  margin-top: .5em;
+  font-size: var(--font-size-ss, var(--font-size-xs));
 }
