@@ -1,4 +1,6 @@
 /* ----- MEDIA BREAKPOINTS ----- */
+@min-min: 0px; // large mobile
+@min-max: 383px; // large mobile
 @xxs-min: 384px; // large mobile
 @xxs-max: 479px; // large mobile
 @xs-min: 480px; // small tablet
@@ -12,6 +14,8 @@
 @xl-min: 1200px; // desktop
 @xl-max: 1599px; // desktop
 @xxl-min: 1600px; // large desktop
+@xxl-max: 1920px; // large desktop
+@max-min: 1921px; // large desktop
 
 // default fonts vars
 @font-size-b: 1.6rem;
@@ -20,6 +24,7 @@
 @h-font-weight: bold;
 
 // font sizes standardized
+@font-size-min: @font-size-b * 0.6; //xsmall
 @font-size-xxs: @font-size-b * 0.6; //xsmall
 @font-size-xs: @font-size-b * 0.75; //small
 @font-size-s: @font-size-b * 1; //text
@@ -27,26 +32,30 @@
 @font-size-l: @font-size-b * 1.5; //h4
 @font-size-xl: @font-size-b * 2; //h3
 @font-size-xxl: @font-size-b * 2.75; //h2
-@font-size-xxxl: @font-size-b * 3.6; //h1
+@font-size-max: @font-size-b * 3.6; //h1
 
 @base-rem: .5rem * 0.8;
 
 // ----- COMPONENTS -----
-@spacing-xxs: @base-rem;
-@spacing-xs: 2 * @base-rem;
-@spacing-sm: 4 * @base-rem;
-@spacing-md: 8 * @base-rem;
-@spacing-lg: 12 * @base-rem;
-@spacing-xl: 16 * @base-rem;
-@spacing-xxl: 24 * @base-rem;
+@spacing-min: @base-rem / 2; // .2rem
+@spacing-xxs: @base-rem; // .4rem
+@spacing-xs: 2 * @base-rem; // .8rem
+@spacing-sm: 3 * @base-rem; // 1.2rem
+@spacing-md: 4 * @base-rem; // 1.6rem
+@spacing-lg: 6 * @base-rem; // 2.4rem
+@spacing-xl: 8 * @base-rem; // 3.2rem
+@spacing-xxl: 12 * @base-rem; // 4.8rem
+@spacing-max: 16 * @base-rem; // 6.4rem
 
-@radius-xxs: @spacing-xxs / 2;
-@radius-xs: @spacing-xs / 2;
-@radius-sm: @spacing-sm / 2;
-@radius-md: @spacing-md / 2;
-@radius-lg: @spacing-lg / 2;
-@radius-xl: @spacing-xl / 2;
-@radius-xxl: @spacing-xxl / 2;
+@radius-min: @spacing-min / 2; // .1rem
+@radius-xxs: @spacing-xxs / 2; // .2rem
+@radius-xs: @spacing-xs / 2; // .4rem
+@radius-sm: @spacing-sm / 2; // .6rem
+@radius-md: @spacing-md / 2; // .8rem
+@radius-lg: @spacing-lg / 2; // 1.2rem
+@radius-xl: @spacing-xl / 2; // 1.6rem
+@radius-xxl: @spacing-xxl / 2; // 2.4rem
+@radius-max: @spacing-max / 2; // 3.2rem
 
-@sizes: xxs, xs, sm, md, lg, xl, xxl;
+@sizes: min, xxs, xs, sm, md, lg, xl, xxl, max;
 @directions: top, right, bottom, left;
