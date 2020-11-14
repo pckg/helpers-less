@@ -5,10 +5,11 @@ option {
   padding: ~"calc(var(--golden) * var(--spacing-xs))";
   display: block;
   width: 100%;
+  background: var(--scope-bg, #fff);
 }
-select.form-control {
+/*select.form-control {
   padding: 0;
-}
+}*/
 
 .form-group {
   > label {
@@ -94,6 +95,14 @@ select.form-control {
     border: 2px solid var(--btn-bg-color);
     color: var(--btn-bg-color);
     background: transparent;
+    line-height: ~"calc(100% - 4px)";
+  }
+
+  &[disabled] {
+    filter: grayscale(85%);
+    opacity: 0.85;
+    cursor: not-allowed;
+    pointer-events: visibleFill;
   }
 }
 
