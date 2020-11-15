@@ -252,7 +252,7 @@ Justify - position left-right
 Align - position top-bottom
  */
 
-@align-items: center, start, end, flex-end;
+@align-items: center, start, end, flex-end, stretch;
 each(@align-items, {
   .mediaCss(~"--@{value}", align-items, @value);
 });
