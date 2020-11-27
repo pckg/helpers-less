@@ -19,6 +19,7 @@ Modal
 .modal-wrapper {
   display: table-cell;
   vertical-align: middle;
+  padding: var(--spacing-md);
 }
 
 .modal-container {
@@ -26,7 +27,9 @@ Modal
   border-radius: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
-  font-family: Helvetica, Arial, sans-serif;
+  max-height: 90vh;
+  overflow: auto;
+//  font-family: Helvetica, Arial, sans-serif;
 }
 
 /*

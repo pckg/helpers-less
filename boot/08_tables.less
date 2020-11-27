@@ -1,6 +1,7 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+  text-align: left;
   &.--fixed {
     table-layout: fixed;
   }
@@ -12,9 +13,6 @@
       &:not(:last-child) > td {
         border-bottom: 1px solid var(--color-grayish);
       }
-      > td:not(:last-child) {
-        border-right: 1px solid var(--color-grayish);
-      }
     }
   }
   &.--hover {
@@ -22,6 +20,12 @@
       td {
         background-color: #f7f7f7;
       }
+    }
+  }
+  &.--padding-sm {
+    > thead > tr > th,
+    > tbody > tr > td {
+      padding: var(--spacing-sm);
     }
   }
   > thead > tr > th,

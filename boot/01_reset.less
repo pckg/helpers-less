@@ -75,6 +75,16 @@ svg {
 ul {
   list-style: none;
 }
+ul.styled,
+ol.styled {
+  display: grid;
+  grid-gap: .666em;
+  list-style-position: inside;
+}
+ul.styled > li,
+ol.styled > li {
+  padding-left: .666em;
+}
 
 blockquote, q {
   quotes: none;
@@ -234,7 +244,15 @@ p {
   line-height: 161.803398875%;
 }
 
-p + p {
+p + p,
+p + ul,
+p + ol,
+ul + p,
+ul + ul,
+ul + ol,
+ol + p,
+ol + ul,
+ol + ol {
   margin-top: .666em;
 }
 
