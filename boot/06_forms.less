@@ -3,6 +3,7 @@
   --btn-fs: ~"calc((var(--font-size-sm) + var(--font-size-md)) / 2)";
   font-size: var(--btn-fs, 1.6rem);
   line-height: ~"calc(var(--btn-fs) * var(--golden))"; // to match the bordered version
+  line-height: ~"calc(var(--btn-fs) * 1.5)"; // to match the bordered version
   padding: ~"calc(var(--btn-fs) / var(--golden) / var(--golden)) var(--btn-fs)";
 
   &.--xxs {
@@ -173,6 +174,7 @@ option {
     background: transparent;
     line-height: ~"calc(100% - 4px)";
     line-height: ~"calc(var(--btn-fs) * var(--golden) - 4px)";
+    line-height: ~"calc(var(--btn-fs) * 1.5 - 4px)";
   }
 
   &[disabled] {
