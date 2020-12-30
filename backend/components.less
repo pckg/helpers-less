@@ -6,8 +6,18 @@
 
 .__menu-item-holder {
   padding: 0 2rem;
+
   a {
     color: #333;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.router-link-exact-active {
+      font-weight: bold;
+    }
   }
 }
 
@@ -20,6 +30,7 @@
   padding-top: var(--spacing-sm);
   padding-bottom: var(--spacing-sm);
 }
+
 .box-with-padding {
   background: #fff;
   padding: 3rem;
