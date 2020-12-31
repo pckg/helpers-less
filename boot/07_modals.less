@@ -14,6 +14,32 @@ Modal
   display: table;
   transition: opacity 0.3s ease, all 0.3s ease;
   backdrop-filter: blur(.25rem);
+
+  &.--error,
+  &.--success {
+    &:before {
+      content: '';
+      display: block;
+      z-index: 0;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.333;
+    }
+  }
+
+  &.--success {
+    &:before {
+      background-color: var(--color-success);
+    }
+  }
+  &.--error {
+    &:before {
+      background-color: var(--color-error);
+    }
+  }
 }
 
 .modal-wrapper {
