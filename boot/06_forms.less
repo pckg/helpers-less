@@ -1,6 +1,7 @@
 .btn,
 .form-control {
   --btn-fs: ~"calc((var(--font-size-sm) + var(--font-size-md)) / 2)";
+  --btn-fs: var(--font-size-sm);
   font-size: var(--btn-fs, 1.6rem);
   line-height: ~"calc(var(--btn-fs) * var(--golden))"; // to match the bordered version
   line-height: ~"calc(var(--btn-fs) * 1.5)"; // to match the bordered version
@@ -36,6 +37,10 @@
     --btn-fs: var(--font-size-xl);
   }
 
+  &.--xxl {
+    --btn-fs: var(--font-size-xxl);
+  }
+
 }
 
 .input-group-addon {
@@ -58,19 +63,27 @@ option {
 }
 
 .form-control {
+  &.--bordered,
+  &.--solid {
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+  }
   &.--bordered {
+    line-height: ~"calc((var(--btn-fs) * var(--golden)) - 2px)"; // to match the bordered version
+    line-height: ~"calc((var(--btn-fs) * 1.5) - 2px)"; // to match the bordered version
     background: #fff;
     border: 1px solid #e7e7e7;
-    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
-    line-height: ~"calc((var(--btn-fs) * var(--golden)) - 2px)"; // to match the bordered version
+  }
+  &.--solid {
+    background: #f0f0f0;
+    border: 1px solid var(--fc--bg, var(--color-grayish-min));
+    color: #666;
+    &:hover {
+      background: #e7e7e7;
+    }
   }
   &.--rounded-max {
     border-radius: ~"calc(((var(--btn-fs) * (1 + var(--golden))) + (var(--btn-fs) / var(--golden) / var(--golden))) / var(--golden) / var(--golden))";
   }
-}
-
-.--rounded-max {
-  border-radius: var(--spacing-max);
 }
 
 .form-group {
@@ -147,11 +160,17 @@ option {
   &.--primary {
     --btn-bg-color: var(--color-primary);
     background-color: var(--color-primary);
+    &:hover {
+      --btn-bg-color: var(--color-primary--hover, var(--color-primary));
+    }
   }
 
   &.--secondary {
     --btn-bg-color: var(--color-secondary);
     background-color: var(--color-secondary);
+    &:hover {
+      --btn-bg-color: var(--color-secondary--hover, var(--color-secondary));
+    }
   }
 
   &.--error {
@@ -173,8 +192,8 @@ option {
     color: var(--btn-bg-color);
     background: transparent;
     line-height: ~"calc(100% - 4px)";
-    line-height: ~"calc(var(--btn-fs) * var(--golden) - 4px)";
-    line-height: ~"calc(var(--btn-fs) * 1.5 - 4px)";
+    line-height: ~"calc(var(--btn-fs) * var(--golden) - 4px)"; // double border
+    line-height: ~"calc((var(--btn-fs) * 1.5) - 4px)";
   }
 
   &[disabled] {
@@ -203,4 +222,53 @@ option {
   top: 50%;
   transform: translate(-100%, -50%);
   font-size: var(--font-size-ss);
+}
+
+.--rounded-0 {
+  border-radius: 0;
+}
+
+.--rounded-min {
+  border-radius: var(--spacing-min);
+}
+
+.--rounded-xxs {
+  border-radius: var(--spacing-xxs);
+}
+
+.--rounded-xs {
+  border-radius: var(--spacing-xs);
+}
+
+.--rounded-ss {
+  border-radius: var(--spacing-ss);
+}
+
+.--rounded-sm {
+  border-radius: var(--spacing-sm);
+}
+
+.--rounded-md {
+  border-radius: var(--spacing-md);
+}
+
+.--rounded-lg {
+  border-radius: var(--spacing-lg);
+}
+
+.--rounded-xl {
+  border-radius: var(--spacing-xl);
+}
+
+.--rounded-xxl {
+  border-radius: var(--spacing-xxl);
+}
+
+.--rounded-max,
+.--rounded {
+  border-radius: var(--spacing-max);
+}
+
+.--rounded-100 {
+  border-radius: 100%;
 }
