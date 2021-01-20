@@ -3,12 +3,14 @@
 }
 
 .container-fluid,
-.container {
+.container,
+.cntnr {
   margin: 0 auto;
   width: 100%;
 }
 
-.container {
+.container,
+.cntnr {
   max-width: 1170px;
   margin: 0 auto;
   position: relative;
@@ -16,31 +18,31 @@
     padding-left: var(--spacing-sm);
     padding-right: var(--spacing-sm);
   }
-}
 
-.container.--xs {
-  max-width: 384px;
-}
-.container.--sm {
-  max-width: 480px;
-}
-.container.--md {
-  max-width: 522px;
-}
-.container.--lg {
-  max-width: 768px;
-}
-.container.--bs {
-  max-width: 960px;
-}
-.container.--wider {
-  max-width: 1280px;
-}
-.container.--max {
-  max-width: 1500px;
-}
-.container.--full {
-  max-width: 100%;
+  &.--xs {
+    max-width: 384px;
+  }
+  &.--sm {
+    max-width: 480px;
+  }
+  &.--md {
+    max-width: 522px;
+  }
+  &.--lg {
+    max-width: 768px;
+  }
+  &.--bs {
+    max-width: 960px;
+  }
+  &.--wider {
+    max-width: 1280px;
+  }
+  &.--max {
+    max-width: 1500px;
+  }
+  &.--full {
+    max-width: 100%;
+  }
 }
 
 .overflow-hidden {
