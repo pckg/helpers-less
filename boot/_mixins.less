@@ -1,0 +1,38 @@
+.multiAttr(@attr, @size, @medium: ~"") {
+  .no-@{attr}@{medium} {
+      @{attr}: 0;
+  }
+  .@{attr}-@{size}@{medium} {
+      @{attr}: ~ "var(--spacing-@{size})";
+  }
+  .@{attr}-@{size}-g@{medium} {
+      @{attr}: ~ "calc(var(--spacing-@{size}) * var(--golden))";
+  }
+  each(@directions, {
+    .no-@{attr}-@{value}@{medium} {
+        @{attr}-@{value}: 0;
+    }
+    .@{attr}-@{value}-@{size}@{medium} {
+        @{attr}-@{value}: ~ "var(--spacing-@{size})";
+    }
+    .@{attr}-@{value}-@{size}-g@{medium} {
+        @{attr}-@{value}: ~ "calc(var(--spacing-@{size}) * var(--golden))";
+    }
+  });
+}
+
+.multiSpacing(@attr, @medium: ~"") {
+  each(@sizes, {
+    .multiAttr(@attr, @value, @medium);
+  });
+}
+
+@medias: 384px, 480px, 640px, 768px, 960px, 1200px, 1600px;
+.multiMedia() {
+  @medium: ~"";
+  @import (multiple) "/var/www/html/vendor/pckg/helpers-less/boot/05_offset.less";
+  each(@medias, {
+    @medium: ~"\@@{value}";
+    @import (multiple) "/var/www/html/vendor/pckg/helpers-less/boot/05_offset.less" screen and (min-width: @value);
+  })
+}
