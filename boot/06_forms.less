@@ -196,6 +196,12 @@ option {
     line-height: ~"calc((var(--btn-fs) * 1.5) - 4px)";
   }
 
+  &.--text {
+    border-color: transparent;
+    background-color: transparent;
+    text-color: var(--btn-bg-color);
+  }
+
   &[disabled] {
     filter: grayscale(85%);
     opacity: 0.85;
