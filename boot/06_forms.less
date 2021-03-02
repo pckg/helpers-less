@@ -222,6 +222,15 @@ option {
   font-size: var(--font-size-ss, var(--font-size-xs));
 }
 
+.btn-group {
+  > :not(:last-child) {
+    margin-right: var(--spacing-xs);
+  }
+  > :not(:first-child) {
+    margin-left: var(--spacing-xs);
+  }
+}
+
 .__more-icon {
   position: absolute;
   right: 0;
