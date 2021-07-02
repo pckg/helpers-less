@@ -32,7 +32,7 @@
 }
 
 .clear-and-width(@n) when (@n > 1) {
-  width: 100% / @n;
+  width: calc(100% / @n);
   .clear(@n);
 }
 
