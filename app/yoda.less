@@ -1,0 +1,167 @@
+:root {
+  --color-primary: #4ad481;
+  --color-secondary: #0d263d;
+}
+
+html {
+  font-family: "Source Sans Pro", Calibri, Candara, Arial, sans-serif;
+}
+
+body {
+  background-color: #f7f6fc;
+}
+
+header {
+  background: #0d263d;
+  color: white;
+  padding: 1.6rem 0;
+  .--bordered {
+    &:hover {
+      color: white;
+      border-color: white;
+    }
+  }
+  &.wrapper {
+    margin-bottom: 10rem;
+  }
+}
+
+.text-style a:not([class]),
+.text-style a[class=""] {
+  font-weight: bold;
+}
+
+.btn {
+  &.--primary {
+    &.--bordered {
+      &:hover {
+        --btn-bg-color: var(--color-secondary);
+      }
+    }
+    &:not(.--bordered) {
+      color: #fff;
+    }
+  }
+  &.--secondary:not(.--bordered,.--text) {
+    color: #fff;
+  }
+}
+
+
+.s-dark-footer {
+  background-color: #0d263d;
+  color: #fff;
+}
+
+.s-light-footer {
+  background-color: #4ad481;
+
+  &,
+  a {
+    color: #000;
+  }
+
+  a {
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
+
+footer {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.c-main-nav {
+  .__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #4ad481;
+    padding: 2rem;
+
+    &:not(--in) {
+      display: none;
+    }
+  }
+
+  .router-link-active {
+    & + .__submenu {
+      display: flex;
+    }
+  }
+
+  .--level-0 {
+    > a {
+      padding: 1rem 2rem;
+
+      &:hover,
+      &.router-link-active {
+        background-color: #4ad481;
+        color: #fff;
+      }
+    }
+  }
+
+  .--level-1 {
+    > a {
+      padding: 1rem;
+      margin: .5rem;
+      background-color: #4ad481;
+      color: #fff;
+
+      &:hover,
+      &.router-link-active {
+        background-color: #0d263d;
+        color: #fff;
+      }
+    }
+  }
+
+  a {
+    color: #4ad481;
+    text-decoration: none;
+  }
+}
+
+img.__logo {
+  max-height: 5rem;
+}
+
+.u-shadow-xs {
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  border-radius: var(--spacing-xs);
+  overflow: hidden;
+}
+
+.boxed {
+  box-shadow: 0 12px 48px 4px rgba(0, 0, 0, 0.133);
+  background: #fff;
+  padding: 2rem;
+  border: 1px solid #f7f6fc;
+  border-radius: 1rem;
+  border-radius: ~"max(0px, min(1rem, calc((100vw - .5rem - 100%) * 9999)))";
+}
+
+.u-panel {
+  background-color: #fff;
+  padding: var(--spacing-lg);
+  .u-panel {
+    background-color: #f7f6fc;
+  }
+}
+
+.form-control {
+  border-radius: .5rem;
+  /*border: 1px solid #cacaca;*/
+  border: 1px solid transparent;
+  box-shadow: 0 0 4px 0 rgb(0 0 0 / 20%);
+}
+
+.c-form-group .help {
+  color: #333;
+  font-size: 1.4rem;
+  margin-top: .5rem;
+}
