@@ -1,18 +1,36 @@
-@import "/var/www/html/vendor/pckg/helpers-less/new-vars.less";
+//@import "/var/www/html/vendor/pckg/helpers-less/new-vars.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/_mixins.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/00_root.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/01_reset.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/02_base.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/03_structure.less";
-@import "/var/www/html/vendor/pckg/helpers-less/boot/04_typography.less";
 
-/**
-Importing multiMedia
- */
-.multiMedia();
+@import "/var/www/html/vendor/pckg/helpers-less/boot/03_structure_media.less";
+@import "/var/www/html/vendor/pckg/helpers-less/boot/05_offset.less";
+
+.mediaStructure();
+.mediaOffset();
+
+each(@breakpoints, {
+  @media screen and (min-width: @value) {
+    @medium: ~"\@@{key}";
+    .mediaStructure(@medium);
+    .mediaOffset(@medium);
+  }
+})
+
+@import "/var/www/html/vendor/pckg/helpers-less/boot/04_typography.less";
 
 @import "/var/www/html/vendor/pckg/helpers-less/boot/06_forms.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/07_modals.less";
 @import "/var/www/html/vendor/pckg/helpers-less/boot/08_tables.less";
 
 @import "/var/www/html/vendor/pckg/helpers-less/boot/99_utils.less";
+
+/**
+Make CSS fast again?
+ */
+[data-padding] {
+  padding: var(attr(data-padding));
+}
+

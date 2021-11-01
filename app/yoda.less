@@ -21,9 +21,6 @@ header {
       border-color: white;
     }
   }
-  &.wrapper {
-    margin-bottom: 10rem;
-  }
 }
 
 .text-style a:not([class]),
@@ -91,10 +88,11 @@ footer {
   .--level-0 {
     > a {
       padding: 1rem 2rem;
+      border-bottom: 2px solid transparent;
 
       &:hover,
       &.router-link-active {
-        background-color: #4ad481;
+        border-color: #4ad481;
         color: #fff;
       }
     }

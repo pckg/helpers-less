@@ -1,23 +1,9 @@
-.width-md {
-  max-width: 468px;
-}
+.mediaOffset(@medium: ~"") {
+  .multiSpacing(margin, m, @medium);
+  .multiSpacing(padding, p, @medium);
 
-.width-lg {
-  max-width: 576px;
-}
-
-.--spacing-md {
-  grid-gap: 2rem;
-}
-
-.--spacing-lg {
-  grid-gap: 4rem;
-}
-
-.multiSpacing(margin, @medium);
-.multiSpacing(padding, @medium);
-
-.margin-center {
-  margin-left: auto;
-  margin-right: auto;
+  .margin-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

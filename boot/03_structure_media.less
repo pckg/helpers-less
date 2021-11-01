@@ -1,0 +1,93 @@
+.mediaStructure(@medium: ~"") {
+
+  each(@overflows, {
+    .overflow-@{value}@{medium} {
+      overflow: @value;
+    }
+    .overflow-x-@{value}@{medium} {
+      overflow-x: @value;
+    }
+    .overflow-y-@{value}@{medium} {
+      overflow-y: @value;
+    }
+  })
+
+  each(@displays, {
+    .@{value}@{medium} {
+      display: @value;
+    }
+  })
+
+  .flex-tower@{medium} {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flex-row@{medium} {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .flex-grid@{medium} {
+    display: grid;
+    /*grid-template-columns: 1fr;*/
+    width: 100%;
+    --grid-column-gap: 0.00000000000000000000001px;
+  }
+
+  each(@tempFlexDirections, {
+    .--@{key}@{medium} {
+      flex-direction: @value;
+    }
+  })
+
+  each(@numbers, {
+    .--x@{value}@{medium} {
+      --column-count: @value;
+    }
+  });
+
+  /**
+  This is made with higher priority.
+   */
+  each(@align-items, {
+    .--ai-@{value}@{medium} {
+      align-items: @value;
+    }
+  });
+
+  each(@align-selfs, {
+    .--as-@{value}@{medium} {
+      align-self: @value;
+    }
+  });
+
+  each(@align-contents, {
+    .--ac-@{value}@{medium} {
+      align-content: @value;
+    }
+  });
+
+  each(@justify-contents, {
+    .--jc-@{value}@{medium} {
+      justify-content: @value;
+    }
+  });
+
+  each(@floats, {
+    .pull-@{value}@{medium} {
+      float: @value;
+    }
+  });
+
+  each(@positions, {
+    .@{value}@{medium} {
+      position: @value;
+    }
+  });
+
+}
