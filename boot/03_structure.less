@@ -32,17 +32,17 @@
 }
 
 .container {
-  max-width: 1170px;
+  --max-width: 1170px;
+  max-width: var(--max-width);
   position: relative;
 
   &.--gutter {
-    padding-left: var(--spacing-sm);
-    padding-right: var(--spacing-sm);
+    max-width: ~"min(calc(100vw - var(--spacing-xl)), var(--max-width))";
   }
 
   each(@containers, {
     &.--@{key} {
-      max-width: ~"min(calc(100vw - 4rem), @{value})";
+      --max-width: @value;
     }
   })
 }

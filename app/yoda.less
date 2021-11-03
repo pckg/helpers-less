@@ -46,13 +46,13 @@ header {
 
 
 .s-dark-footer {
-  background-color: #0d263d;
+  background-color: var(--color-secondary);
   color: #fff;
 }
 
 .s-light-footer {
-  background-color: #4ad481;
-  color: #fff;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 
   a {
     font-weight: bold;
@@ -136,7 +136,8 @@ img.__logo {
   padding: 2rem;
   border: 1px solid #f7f6fc;
   border-radius: 1rem;
-  border-radius: ~"max(0px, min(1rem, calc((100vw - .5rem - 100%) * 9999)))";
+  @br: ~"max(0px, min(1rem, calc((100vw - .5rem - 100%) * 9999)))";
+  border-radius: @br;
 }
 
 .u-panel {

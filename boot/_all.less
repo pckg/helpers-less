@@ -14,6 +14,7 @@
 each(@breakpoints, {
   @media screen and (min-width: @value) {
     @medium: ~"\@@{key}";
+    @breakpoint: @key;
     .mediaStructure(@medium);
     .mediaOffset(@medium);
   }

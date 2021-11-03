@@ -61,17 +61,18 @@
 
 /* min?, xxs, xs, sm, md, lg, xl, max? */
 @breakpoints: {
-//  xxs: 384px;
+  xxs: 384px;
   xs: 480px;
   sm: 640px;
   md: 768px;
   lg: 960px;
   xl: 1140px;
-//  xxl: 1440px;
+  xxl: 1440px;
 }
 
 @medias: xs, md, xl;
-@containers: xs, md, xl;
+@containers: xs, sm, md, lg, xl;
+@containers: @breakpoints;
 
 @limitedSizes: xxs, xs, sm, md, lg, xl, xxl;
 @limitedSizes: xs, sm, md, lg, xl;
