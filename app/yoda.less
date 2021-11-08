@@ -35,12 +35,12 @@ header {
         --btn-bg-color: var(--color-secondary);
       }
     }
-    &:not(.--bordered) {
+  }
+  &.--secondary,
+  &.--primary {
+    &:not(.--text,.--bordered) {
       color: #fff;
     }
-  }
-  &.--secondary:not(.--bordered,.--text) {
-    color: #fff;
   }
 }
 
