@@ -86,7 +86,9 @@
 
 @text-transforms: uppercase, lowercase;
 each(@text-transforms, {
-  text-transform: @value;
+  .@{value} {
+    text-transform: @value;
+  }
 })
 
 /*$weights: 100, 200, 300, 400, 500, 600, 700, 800, 900;
