@@ -66,6 +66,9 @@ footer {
 }
 
 .c-main-nav {
+  header:has(& a.router-link-active + ul) {
+    margin-bottom: 6rem;
+  }
   .__submenu {
     position: absolute;
     top: 100%;
@@ -106,7 +109,7 @@ footer {
       color: #fff;
 
       &:hover,
-      &.router-link-active {
+      &.router-link-exact-active {
         background-color: #0d263d;
         color: #fff;
       }
