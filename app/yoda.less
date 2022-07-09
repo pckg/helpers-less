@@ -66,15 +66,17 @@ footer {
 }
 
 .c-main-nav {
-  header:has(& a.router-link-active + ul) {
+  font-size: 1.8rem;
+
+  header:has(& a.router-link-exact-active + ul),
+  header:has(& a.router-link-active:not(.--exact) + ul) {
     margin-bottom: 6rem;
   }
   .__submenu {
     position: absolute;
-    top: 100%;
+    top: 8rem;
     left: 0;
     right: 0;
-    background: #4ad481;
     padding: 2rem;
 
     &:not(--in) {
@@ -82,7 +84,8 @@ footer {
     }
   }
 
-  .router-link-active {
+  .router-link-active:not(.--exact),
+  .router-link-exact-active {
     & + .__submenu {
       display: flex;
     }
@@ -102,11 +105,12 @@ footer {
   }
 
   .--level-1 {
+    font-weight: 100;
+    
     > a {
       padding: 1rem;
       margin: .5rem;
-      background-color: #4ad481;
-      color: #fff;
+      color: #000;
 
       &:hover,
       &.router-link-exact-active {
